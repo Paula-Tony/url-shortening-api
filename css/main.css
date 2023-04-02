@@ -1,0 +1,198 @@
+:root {
+  --gray: hsl(0, 0%, 75%);
+  --grayish-violet: hsl(257, 7%, 63%);
+  --very-dark-violet: hsl(260, 8%, 14%);
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+  --very-dark-blue: hsl(255, 11%, 22%);
+  --red: hsl(0, 87%, 67%);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+::selection {
+  background-color: var(--cyan);
+  color: var(--very-dark-violet);
+}
+.txt-grayish-violet {
+  color: var(--grayish-violet);
+}
+.bg-cyan {
+  background-color: var(--cyan);
+}
+.btn:hover {
+  background-color: hsl(180deg 66% 49% / 60%);
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.login-btn:hover {
+  background-color: transparent;
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--dark-violet);
+  }
+  .navbar-nav {
+    border-bottom: 1px solid hsl(257deg 7% 63% / 40%);
+  }
+  .nav-link,
+  .login-btn,
+  .nav-link:hover,
+  .login-btn:hover {
+    color: white;
+  }
+  .sign-up-btn {
+    width: 100%;
+  }
+}
+.landing .container {
+  min-height: calc(100vh - 91px);
+  padding-bottom: 8rem;
+}
+.landing .container .left h1 {
+  font-size: 3.5rem;
+}
+@media (max-width: 991px) {
+  .landing .container .left h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container .left h1 {
+    font-size: 2rem;
+  }
+}
+.shorten-link {
+  background-color: #eff1f7;
+}
+.shorten-link form {
+  background-image: url(../images/bg-shorten-desktop.svg);
+  background-color: var(--dark-violet);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -94.4px;
+}
+@media (max-width: 991px) {
+  .shorten-link form {
+    top: -70.4px;
+  }
+}
+.shorten-link form.warning::before {
+  content: 'Please add a link';
+  position: absolute;
+  left: 3rem;
+  bottom: 1rem;
+  color: var(--red);
+  font-style: italic;
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .shorten-link form.warning::before {
+    left: 1.5rem;
+    bottom: 3px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .shorten-link form.warning::before {
+    left: 1.5rem;
+    top: 43%;
+  }
+}
+.shorten-link form .link-input {
+  border-color: transparent;
+}
+.shorten-link form .link-input:focus {
+  outline: none;
+}
+.shorten-link form .link-input.warning {
+  border-color: var(--red);
+}
+.shorten-link form .link-input.warning::placeholder {
+  color: var(--red);
+}
+.shorten-link .links-container {
+  margin-top: -55px;
+}
+@media (max-width: 991px) {
+  .shorten-link .links-container {
+    margin-top: -45px;
+  }
+}
+@media (max-width: 767px) {
+  .shorten-link .links-container .original-link {
+    border-bottom: 1px solid hsl(257deg 7% 63% / 40%);
+  }
+}
+.shorten-link .links-container .new-link {
+  color: var(--cyan);
+}
+.shorten-link .links-container .link .copied {
+  background-color: var(--dark-violet);
+}
+.statistics {
+  background-color: #eff1f7;
+}
+.statistics .container > p {
+  max-width: 500px;
+}
+.statistics .cards-container {
+  min-height: 400px;
+}
+.statistics .cards-container::before {
+  content: '';
+  position: absolute;
+  background-color: var(--cyan);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 5px;
+}
+@media (max-width: 991px) {
+  .statistics .cards-container::before {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: calc(100% - 10px);
+  }
+}
+.statistics .card .image {
+  background-color: var(--dark-violet);
+  width: 80px;
+  height: 80px;
+  top: -40px;
+}
+.boost-section {
+  background-color: var(--dark-violet);
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer {
+  background-color: var(--very-dark-violet);
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li {
+  color: var(--gray);
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer ul li:hover {
+  color: var(--cyan);
+}
+footer .social-icons a svg {
+  fill: white;
+  transition: 0.3s;
+}
+footer .social-icons a svg:hover {
+  fill: var(--cyan);
+}
